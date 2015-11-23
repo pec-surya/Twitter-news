@@ -1,0 +1,12 @@
+{% block title %} Tweets for {{ name }} {% endblock %}
+
+{% block content %}
+	<h1>Tweets for the Channel {{ name }}</h1>
+
+	{% if tweets|length %}
+		{% for t in tweets %}
+			<div>{{ t }}</div><br/>
+		{% endfor %}
+	{% endif %}
+
+{% endblock %}

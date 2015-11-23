@@ -1,0 +1,9 @@
+{% block title %} All Tweets {% endblock %}
+
+{% block content %}
+	{% if news|length %}
+		{% for n in news %}
+			<h1><a href="/get/{{n.newsChannelName}}">{{ n.newsChannelName }}</a></h1>
+		{% endfor %}
+	{% endif %}
+{% endblock %}
